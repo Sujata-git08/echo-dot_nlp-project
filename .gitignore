@@ -1,0 +1,25 @@
+
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Browser profile / cookies
+chrome_profile/
+amazon_cookies.pkl
+
+# Model artifacts
+*.keras
+*.pkl
+*.model
+*.h5
+
+# Logs & system files
+*.log
+.DS_Store
+Thumbs.db
+
+# Raw scraped data backups (optional)
+data/raw/*.csv
+!data/raw/sample_reviews.csv
