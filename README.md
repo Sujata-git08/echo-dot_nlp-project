@@ -1,14 +1,37 @@
-# echo-dot_nlp-project
+# Echo Dot Customer Review NLP Analysis
 
-# Customer Review NLP (Echo Dot 5th Gen) — Classical NLP Pipeline
+End-to-End Classical NLP Pipeline for Amazon Echo Dot Reviews — Scraping, Preprocessing, Analysis & Insights
 
-End-to-end traditional NLP project (no transformers) to extract, clean, analyze, and interpret e-commerce product reviews.  
-Covers scraping → translation → POS/NER → TF-IDF/LSA → Word2Vec → Sentiment (VADER + LSTM) → Similarity summary → QA.
+# Project Overview
 
-## 📦 Environment
+This project performs complete NLP pipeline analysis on Amazon Echo Dot (5th Gen) customer reviews, using only classical NLP approaches (no transformers). The aim is to help e-commerce platforms and product teams extract insights from customer feedback using rule-based, statistical, and deep learning methods.
+  
+""" 
+Scraping ➜ Language Detection ➜ Translation ➜ Cleaning ➜ Tokenization ➜ POS Tagging ➜ NER ➜ TF-IDF ➜ LSA ➜ Word2Vec ➜ Sentiment Analysis (VADER + LSTM) ➜ Clustering + Summary ➜ QA Generation
+"""
 
-```bash
-python -m venv .venv
-source .venv/bin/activate         # (Windows: .venv\Scripts\activate)
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
+
+# Repository Structure
+
+echo-dot-nlp-project/
+│── data/
+│   ├── raw/                # Scraped reviews
+│   ├── interim/            # Translated / preprocessed
+│   └── processed/          # Final results CSVs
+│
+│── scripts/                # Modular processing scripts
+│   ├── scraping.py
+│   ├── lang_detect_translate.py
+│   ├── nlp_preprocessing.py
+│   ├── spacy_pos_tagging.py
+│   ├── spacy_ner.py
+│   ├── tfidf_lsa_topics.py
+│   ├── semantic_analysis.py
+│   ├── word2vec.py
+│   ├── lstm_sentiment.py
+│   └── QA_from_reviews.py
+│
+│── models/                 # Saved ML models
+│── reports/                
+├── .gitignore
+└── README.md
